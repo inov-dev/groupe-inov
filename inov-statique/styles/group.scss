@@ -160,9 +160,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .gi-feature-list h2 { margin: 0 0 13px; font-size: clamp(27px, 3vw, 42px); }
 .gi-feature-list p { max-width: 690px; margin: 0 0 21px; color: var(--gi-muted); font-size: 17px; line-height: 1.8; }
 .gi-team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.gi-team-grid article { min-height: 245px; padding: 30px; border: 1px solid var(--gi-line); border-radius: 6px; }
-.gi-team-avatar { display: flex; width: 49px; height: 49px; align-items: center; justify-content: center; border-radius: 50%; color: white; background: var(--gi-blue); font-size: 12px; font-weight: 900; letter-spacing: .04em; }
-.gi-team-grid h2 { margin: 34px 0 8px; font-size: 22px; }
+.gi-team-grid article { overflow: hidden; border: 1px solid var(--gi-line); border-radius: 6px; background: white; }
+.gi-team-photo { position: relative; height: 300px; overflow: hidden; background: var(--gi-pale); }
+.gi-team-photo img { object-fit: cover; object-position: center 30%; }
+.gi-team-info { min-height: 124px; padding: 21px 25px 24px; }
+.gi-team-grid h2 { margin: 0 0 8px; font-size: 22px; }
 .gi-team-grid p { margin: 0; color: var(--gi-muted); font-size: 13px; }
 .gi-team-note { max-width: 700px; margin: 35px 0 20px; color: var(--gi-muted); font-size: 15px; }
 
