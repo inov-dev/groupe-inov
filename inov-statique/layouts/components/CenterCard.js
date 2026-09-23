@@ -7,6 +7,7 @@ export default function CenterCard({ centre, index }) {
     <article className="gi-centre-card">
       <Link href={`/centres/${centre.slug}`} className="gi-centre-photo" aria-label={`Découvrir le centre de ${centre.name}`}>
         <Image src={centre.image} alt={centre.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" />
+        <span className={`gi-card-logo gi-card-logo--${centre.slug}`}><Image src={centre.logo} alt="" fill sizes="150px" /></span>
         <span className="gi-photo-index">0{index + 1} / 03</span>
       </Link>
       <div className="gi-centre-card-body">

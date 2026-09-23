@@ -25,6 +25,7 @@ export default function CentrePage({ params }) {
           <Link className="gi-back-link" href="/centres">← Tous les centres</Link>
           <div className="gi-centre-hero-grid">
             <div>
+              <div className={`gi-detail-logo gi-detail-logo--${centre.slug}`}><Image src={centre.logo} alt={centre.logoAlt} fill sizes="210px" /></div>
               <p className="gi-eyebrow"><span /> {centre.entity} · {centre.type}</p>
               <h1>{centre.name}<em>{centre.speciality}</em></h1>
               <p>{centre.description}</p>
@@ -40,6 +41,10 @@ export default function CentrePage({ params }) {
           <div className="gi-practical-card"><span className="gi-practical-icon" aria-hidden="true">⌁</span><h3>Adresse</h3><address>{centre.address.map((line) => <span key={line}>{line}<br /></span>)}</address><a href={mapHref(centre)} target="_blank" rel="noopener noreferrer">Ouvrir l’itinéraire ↗</a></div>
           <div className="gi-practical-card"><span className="gi-practical-icon" aria-hidden="true">↗</span><h3>Contacter</h3><p>{centre.phoneNote && <span className="gi-small-note">{centre.phoneNote}<br /></span>}<a className="gi-phone" href={`tel:${centre.phoneHref}`}>{centre.phone}</a></p>{centre.email && <a href={`mailto:${centre.email}`}>{centre.email}</a>}{centre.hours && <p className="gi-small-note">{centre.hours}</p>}</div>
           <div className="gi-practical-card"><span className="gi-practical-icon" aria-hidden="true">→</span><h3>Votre venue</h3><p>{centre.access}</p></div>
+        </div>
+        <div className="gi-centre-website">
+          <div><span className="gi-section-kicker">Site du centre</span><h3>{centre.websiteDisplay}</h3><p>{centre.websiteReady ? "Retrouvez les informations et les démarches propres à ce centre sur son site dédié." : "Le site dédié de ce centre est en préparation. Les informations pratiques restent disponibles sur cette page."}</p></div>
+          {centre.websiteReady && <a className="gi-btn gi-btn-primary" href={centre.website} target="_blank" rel="noopener noreferrer">Visiter le site du centre <span aria-hidden="true">↗</span></a>}
         </div>
         <p className="gi-centre-note">{centre.note}</p>
       </div></section>

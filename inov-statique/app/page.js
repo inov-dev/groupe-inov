@@ -31,6 +31,20 @@ export default function Home() {
         <div className="gi-hero-bottom gi-wrap"><span>01 / 03</span><span>Soigner avec précision. Agir avec proximité.</span></div>
       </section>
 
+      <section className="gi-network-strip" aria-label="Les trois centres du Groupe INOV">
+        <div className="gi-wrap">
+          <p className="gi-network-label">Trois centres, une même exigence</p>
+          <div className="gi-network-logos">
+            {centres.map((centre) => (
+              <Link key={centre.slug} href={`/centres/${centre.slug}`} className={`gi-network-logo gi-network-logo--${centre.slug}`} aria-label={`Découvrir ${centre.entity} à ${centre.name}`}>
+                <span className="gi-network-image"><Image src={centre.logo} alt={centre.logoAlt} fill sizes="(max-width: 600px) 190px, 260px" /></span>
+                <span className="gi-network-caption">{centre.name}<span aria-hidden="true">↗</span></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="groupe" className="gi-section gi-intro-section">
         <div className="gi-wrap gi-intro-grid">
           <p className="gi-section-kicker">01 — Le groupe</p>
