@@ -1,0 +1,28 @@
+{
+  "site": {
+    "title": "Groupe INOV",
+    "base_url": "https://groupe-inov.com",
+    "favicon": "/images/favicon.png",
+    "logo": "/images/INOV_groupe_logo.png",
+    "logo_width": "170",
+    "logo_height": "80",
+    "logo_text": "Groupe INOV"
+  },
+
+  "settings": {
+    "pagination": 3,
+    "summary_length": 200,
+    "blog_folder": "posts"
+  },
+
+  "params": {
+    "tag_manager_id": "",
+    "copyright": "© Groupe INOV"
+  },
+
+  "metadata": {
+    "meta_author": "Groupe INOV",
+    "meta_image": "",
+    "meta_description": "Le Groupe INOV développe et opère des centres de médecine nucléaire."
+  }
+}
