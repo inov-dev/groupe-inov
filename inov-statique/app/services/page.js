@@ -1,39 +1,14 @@
-import { getSinglePage } from "@lib/contentParser";
-import { marked } from "marked";
-import AboutLayout from "@layouts/About";
-import DefaultLayout from "@layouts/Default";
+import Link from "next/link";
 
-export default async function ServicesPage() {
-  const pages = await getSinglePage("content");
-  const service = pages.find((p) => p.slug === "services");
+export const metadata = { title: "Nos expertises | Groupe INOV", description: "Médecine nucléaire, imagerie TEP et organisation de centres de soins au sein du Groupe INOV." };
 
-  const { frontmatter, content } = service;
-  const { layout, image, title } = frontmatter;
-
-  // Sélection dynamique du layout
-  const Layout = layout === "about" ? AboutLayout : DefaultLayout;
-
-  return (
-     <Layout data={service}>
-      {/* Hero avec image */}
-      {image && (
-        <div
-          className="w-full h-64 bg-cover bg-center mb-10"
-          style={{ backgroundImage: `url(${image})` }}
-        >
-          <div className="h-full w-full bg-black/40 flex items-center justify-center">
-            <h1 className="text-white text-4xl font-bold">{title}</h1>
-          </div>
-        </div>
-      )}
-
-      {/* Contenu Markdown */}
-      <div
-        className="prose max-w-none"
-        dangerouslySetInnerHTML={{
-          __html: marked(content),
-        }}
-      />
-    </Layout>
-  );
+export default function ServicesPage() {
+  return <main>
+    <section className="gi-page-hero"><div className="gi-wrap"><p className="gi-eyebrow"><span /> Groupe INOV · Expertises</p><h1>La maîtrise médicale <em>à chaque étape.</em></h1><p>Des pratiques d’imagerie spécialisées, soutenues par une organisation attentive à la qualité du parcours.</p></div></section>
+    <section className="gi-section"><div className="gi-wrap"><div className="gi-feature-list">
+      <article><span>01 / Imagerie</span><div><h2>Scintigraphie</h2><p>Au centre INOV de Saint-Doulchard, les équipes réalisent des examens de scintigraphie et de cardiologie nucléaire pour explorer le fonctionnement des organes.</p><Link className="gi-inline-link" href="/centres/saint-doulchard">Découvrir Saint-Doulchard ↗</Link></div></article>
+      <article><span>02 / Imagerie</span><div><h2>TEP Scanner</h2><p>À Bourges, CHERMED accueille les patients dans une unité dédiée aux examens TEP, en lien avec les médecins du Groupe INOV.</p><Link className="gi-inline-link" href="/centres/bourges">Découvrir Bourges ↗</Link></div></article>
+      <article><span>03 / Territoires</span><div><h2>Coordination des centres</h2><p>Le groupe accompagne les centres dans leur organisation, leurs moyens techniques et la coordination des équipes médicales et opérationnelles.</p><Link className="gi-inline-link" href="/centres">Voir nos implantations ↗</Link></div></article>
+    </div></div></section>
+  </main>;
 }

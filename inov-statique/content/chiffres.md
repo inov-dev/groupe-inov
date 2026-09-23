@@ -1,6 +1,6 @@
 ---
 title: "Chiffres clés du groupe INOV"
-draft: false
+draft: true
 ---
 
 <BackButton href="/" label="Retour" />
@@ -34,4 +34,3 @@ Regardez ces fameux chiffres:
 <Chiffres width="w-40" height="h-40" color="bg-purple-100"> 
     #### **1 gamma SPECTRUM**
 </Chiffres>
-

@@ -1,39 +1,16 @@
-import { getSinglePage } from "@lib/contentParser";
-import { marked } from "marked";
-import AboutLayout from "@layouts/About";
-import DefaultLayout from "@layouts/Default";
+import Link from "next/link";
 
-export default async function EquipePage() {
-  const pages = await getSinglePage("content");
-  const equipe = pages.find((p) => p.slug === "equipe");
+export const metadata = { title: "L'équipe | Groupe INOV", description: "Découvrez la direction médicale et la direction générale déléguée du Groupe INOV." };
 
-  const { frontmatter, content } = equipe;
-  const { layout, image, title } = frontmatter;
+const team = [
+  { name: "Dr Hugo Lemasle", role: "Médecin nucléaire · co-gérant de la SELARL INOV", initials: "HL" },
+  { name: "Dr Victor Arnould", role: "Médecin nucléaire · co-gérant de la SELARL INOV", initials: "VA" },
+  { name: "Antonin Noyelle", role: "Directeur général délégué du Groupe INOV", initials: "AN" },
+];
 
-  // Sélection dynamique du layout
-  const Layout = layout === "about" ? AboutLayout : DefaultLayout;
-
-  return (
-     <Layout data={equipe}>
-      {/* Hero avec image */}
-      {image && (
-        <div
-          className="w-full h-64 bg-cover bg-center mb-10"
-          style={{ backgroundImage: `url(${image})` }}
-        >
-          <div className="h-full w-full bg-black/40 flex items-center justify-center">
-            <h1 className="text-white text-4xl font-bold">{title}</h1>
-          </div>
-        </div>
-      )}
-
-      {/* Contenu Markdown */}
-      <div
-        className="prose max-w-none"
-        dangerouslySetInnerHTML={{
-          __html: marked(content),
-        }}
-      />
-    </Layout>
-  );
+export default function EquipePage() {
+  return <main>
+    <section className="gi-page-hero"><div className="gi-wrap"><p className="gi-eyebrow"><span /> Groupe INOV · Équipe</p><h1>Des compétences réunies <em>autour d’un même projet.</em></h1><p>La coordination du groupe s’appuie sur des praticiens engagés et une direction proche des équipes de terrain.</p></div></section>
+    <section className="gi-section"><div className="gi-wrap"><p className="gi-section-kicker">Direction</p><div className="gi-team-grid">{team.map((member) => <article key={member.name}><span className="gi-team-avatar">{member.initials}</span><h2>{member.name}</h2><p>{member.role}</p></article>)}</div><p className="gi-team-note">Les équipes médicales, techniques et administratives de chaque centre contribuent au fonctionnement quotidien du réseau.</p><Link className="gi-inline-link" href="/centres">Découvrir nos centres ↗</Link></div></section>
+  </main>;
 }

@@ -2,7 +2,7 @@
   "site": {
     "title": "Groupe INOV",
     "base_url": "https://groupe-inov.com",
-    "favicon": "/images/favicon.png",
+    "favicon": "/favicon.svg",
     "logo": "/images/INOV_groupe_logo.png",
     "logo_width": "170",
     "logo_height": "80",
@@ -23,6 +23,6 @@
   "metadata": {
     "meta_author": "Groupe INOV",
     "meta_image": "",
-    "meta_description": "Le Groupe INOV développe et opère des centres de médecine nucléaire."
+    "meta_description": "Le Groupe INOV réunit des centres de médecine nucléaire à Saint-Doulchard, Bourges et Nevers. Expertise médicale, précision et proximité."
   }
 }

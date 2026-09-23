@@ -1,48 +1,19 @@
 ---
 title: "Notre histoire"
+description: "De Saint-Doulchard aux implantations du Groupe INOV"
 draft: false
 ---
 
-<BackButton href="/" label="Retour" />
+## Un ancrage à Saint-Doulchard
 
-### 1998: Création du cabinet INOV de Saint-Doulchard
+Le cabinet de médecine nucléaire INOV accueille des patients au sein de l’Hôpital Privé Guillaume de Varye depuis 1998. Ce site est aujourd’hui dédié aux examens de scintigraphie et de cardiologie nucléaire.
 
-<TwoColumns>
-  <div>
-    <ImageWrapper width="w-[600px]" height="h-[400px]"  src="/images/centre_saint-doulchard.jpg" />
-  </div>
+## Des activités complémentaires à Bourges
 
-  <div>
-    Accueil au sein de la clinique Guillaume de Varye située au 210, route de Vouzeron, à Saint-Doulchard.
+Les examens TEP Scanner sont réalisés à Bourges dans l’unité CHERMED du site Jacques Cœur, structure créée par les médecins d’INOV. Cette organisation distingue clairement les lieux d’examen tout en maintenant une coordination médicale entre les équipes.
 
-  </div>
-</TwoColumns>
+## Une présence à Nevers
 
-### 2012: Inauguration du PET SCAN.
+Le Centre de Médecine Nucléaire de la Nièvre (CM2N), situé sur le site de l’Hôpital Pierre Bérégovoy, complète les implantations présentées par le groupe.
 
-<TwoColumns>
-
-  <div>
-    Cette technique d’imagerie médicale anatomique et fonctionnelle permet d’évaluer le métabolisme cellulaire, ainsi que détecter et suivre l’évolution d’une maladie cancéreuse.
-  </div>
-  <div>
-    <ImageWrapper width="w-[600px]" height="h-[400px]" src="/images/pet-scan.webp" />
-  </div>
-</TwoColumns>
-
-### 2016: Création de SELARL INOV.
-
-<TwoColumns>
-  <div>
-    <ImageWrapper width="w-[600px]" height="h-[400px]" src="/images/inov_logo-bg-free.png" />
-  </div>
-
-  <div>
-    Restructuration juridique et organisationnelle du groupe.
-  </div>
-</TwoColumns>
-
-
-
-
-
+[Découvrir les centres et préparer votre venue](/centres)

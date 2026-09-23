@@ -1,39 +1,12 @@
-import { getSinglePage } from "@lib/contentParser";
-import { marked } from "marked";
-import AboutLayout from "@layouts/About";
-import DefaultLayout from "@layouts/Default";
+import Link from "next/link";
+import CenterCard from "@layouts/components/CenterCard";
+import { centres } from "@lib/centres";
 
-export default async function ProjetsPage() {
-  const pages = await getSinglePage("content");
-  const projets = pages.find((p) => p.slug === "projets");
+export const metadata = { title: "Implantations et projets | Groupe INOV" };
 
-  const { frontmatter, content } = projets;
-  const { layout, image, title } = frontmatter;
-
-  // Sélection dynamique du layout
-  const Layout = layout === "about" ? AboutLayout : DefaultLayout;
-
-  return (
-     <Layout data={projets}>
-      {/* Hero avec image */}
-      {image && (
-        <div
-          className="w-full h-64 bg-cover bg-center mb-10"
-          style={{ backgroundImage: `url(${image})` }}
-        >
-          <div className="h-full w-full bg-black/40 flex items-center justify-center">
-            <h1 className="text-white text-4xl font-bold">{title}</h1>
-          </div>
-        </div>
-      )}
-
-      {/* Contenu Markdown */}
-      <div
-        className="prose max-w-none"
-        dangerouslySetInnerHTML={{
-          __html: marked(content),
-        }}
-      />
-    </Layout>
-  );
+export default function ProjetsPage() {
+  return <main>
+    <section className="gi-page-hero"><div className="gi-wrap"><p className="gi-eyebrow"><span /> Groupe INOV · Territoires</p><h1>Des centres inscrits <em>dans leur territoire.</em></h1><p>Découvrez les trois implantations présentées sur ce site et les informations pratiques de chaque lieu.</p></div></section>
+    <section className="gi-section gi-centres-section"><div className="gi-wrap"><div className="gi-centre-grid">{centres.map((centre, index) => <CenterCard key={centre.slug} centre={centre} index={index} />)}</div><Link className="gi-inline-link gi-all-centres" href="/centres">Accéder à l’annuaire des centres ↗</Link></div></section>
+  </main>;
 }

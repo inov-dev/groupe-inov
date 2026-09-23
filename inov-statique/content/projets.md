@@ -1,6 +1,6 @@
 ---
 title: "Projets et Etude de Cas"
-draft: false
+draft: true
 ---
 
 <BackButton href="/" label="Retour" />
@@ -26,4 +26,3 @@ draft: false
 </MenuButton2>
 
 </div>
-

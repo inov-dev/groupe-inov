@@ -1,16 +1,15 @@
 import config from "@config/config.json";
 import theme from "@config/theme.json";
-import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
-import withBasePath from "@lib/utils/basePath";
 import "../styles/style.scss";
 
 export const metadata = {
   title: config.site.title,
   description: config.metadata.meta_description,
   metadataBase: new URL(config.site.base_url),
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
 export default function RootLayout({ children }) {
@@ -26,9 +25,7 @@ export default function RootLayout({ children }) {
         />
 
         {/* favicon */}
-        <link rel="shortcut icon" href={withBasePath(config.site.favicon)} />
-        {/* theme meta */}
-        <meta name="theme-name" content="andromeda-light-nextjs" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
         {/* google font css */}
         <link
@@ -43,22 +40,19 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
 
-        {/* theme meta */}
-        <meta name="theme-name" content="andromeda-light-nextjs" />
-        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-TileColor" content="#122b4d" />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: light)"
-          content="#fff"
+          content="#f2f6fa"
         />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: dark)"
-          content="#000"
+          content="#122b4d"
         />
       </head>
       <body suppressHydrationWarning={true}>
-        <TwSizeIndicator />
         <Header />
         <Providers>{children}</Providers>
         <Footer />

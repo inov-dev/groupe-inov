@@ -12,8 +12,7 @@ draft: false
 - Siège social : 3 rue Mably, 18000 Bourges, France
 - SIREN : 941 917 544
 - RCS Bourges : 941 917 544
-- Téléphone : [+33 2 48 23 99 60](tel:+33248239960)
-- Courriel : [inov.rdv@gmail.com](mailto:inov.rdv@gmail.com)
+- Courriel : [contact@groupe-inov.com](mailto:contact@groupe-inov.com)
 
 ## Directeur de la publication
 
@@ -26,3 +25,7 @@ GitHub Pages, service de GitHub, Inc.
 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis
 
 [github.com](https://github.com/)
+
+## Formulaire de contact
+
+Le formulaire du site est destiné aux demandes générales et professionnelles. Les informations saisies sont transmises au Groupe INOV par le service [FormSubmit](https://formsubmit.co/) afin de répondre à votre message. Ne transmettez pas de données médicales par ce formulaire. Pour toute question relative à vos données, écrivez à [contact@groupe-inov.com](mailto:contact@groupe-inov.com).

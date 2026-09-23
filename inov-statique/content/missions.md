@@ -1,6 +1,6 @@
 ---
 title: "Mission, vision et zones d’intervention"
-draft: false
+draft: true
 ---
 
 <BackButton href="/" label="Retour" />
@@ -49,4 +49,3 @@ draft: false
 
   </div>
 </TwoColumns>
-

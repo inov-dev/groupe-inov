@@ -3,7 +3,7 @@ title: "Groupe INOV"
 meta_title: "Accueil"
 image: "/images/INOV_groupe_logo.png"
 layout: "about"
-draft: false
+draft: true
 
 # social sites
 social: {}
@@ -38,4 +38,3 @@ Le Groupe **INOV** développe et opère des centres de médecine nucléaire mode
 
 
 ---
-

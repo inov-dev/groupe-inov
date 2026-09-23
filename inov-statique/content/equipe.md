@@ -1,6 +1,6 @@
 ---
 title: "Equipe"
-draft: false
+draft: true
 ---
 
 <BackButton href="/" label="Retour" />
